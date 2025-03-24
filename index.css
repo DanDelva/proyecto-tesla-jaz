@@ -1,0 +1,199 @@
+/* Fuente para el texto en toda la página */
+body {
+    font-family: 'Roboto', sans-serif; /* Mantén la fuente que se estaba usando */
+    background-color: #000000; /* Fondo negro */
+    color: #f8f9fa; /* Color de texto blanco */
+}
+
+/* Hero se mantiene igual, pero puede tener ajustes de contraste si es necesario */
+.hero {
+    background: url('https://www.tesla.com/sites/default/files/modelsx-new/social/model-x-social.jpg') center/cover no-repeat;
+    color: white;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.hero h1 {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-family: "Open Sans", sans-serif; /* Fuente similar a Tesla */
+    font-size: 2.5rem;  /* Tamaño de la fuente adecuado para dispositivos móviles */
+    font-weight: bold;  /* Estilo negrita */
+    color: #f8f9fa; /* Blanco para el texto */
+}
+
+
+.open-sans-uniquifier {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;  /* Ajustar el tamaño del texto en pantallas más pequeñas */
+    }
+}
+
+/* Estilos de las tarjetas */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border-radius: 15px;
+    background-color: #343a40; /* Fondo gris oscuro para las tarjetas */
+}
+
+/* Efecto hover */
+.card:hover {
+    transform: translateY(-10px) scale(1.05); /* Aumentar ligeramente el tamaño */
+    box-shadow: 0px 20px 40px rgba(231, 33, 39, 0.8); /* Sombra roja más visible */
+    background-color: #2c2f36; /* Cambio de color para dar un efecto de enfoque */
+}
+
+/* Imagen de las tarjetas */
+.card img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+
+.card-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e82127; /* Rojo Tesla */
+    margin-top: 10px;
+}
+
+/* Colores de los textos */
+.card-title {
+    color: #f8f9fa; /* Título blanco */
+}
+
+.card-body {
+    background-color: #343a40; /* Fondo gris oscuro */
+    color: #f8f9fa; /* Texto blanco */
+}
+
+.btn-primary:hover {
+    background-color: #d11e23; /* Rojo más oscuro */
+}
+
+.btn-info {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-info:hover {
+    background-color: #0056b3;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+/* Animaciones */
+.animate__animated.animate__fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate__animated.animate__fadeInLeft {
+    animation: fadeInLeft 1s ease-out forwards;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate__animated.animate__fadeInRight {
+    animation: fadeInRight 1s ease-out forwards;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Aplica la fuente elegante a los botones */
+.btn-primary {
+    background-color: white; /* Fondo blanco */
+    color: black; /* Letras negras */
+    border: 1px solid #ccc; /* Borde gris suave */
+    font-weight: bold;
+    font-family: 'Playfair Display', serif; /* Cambiar la fuente a Playfair Display */
+    transition: all 0.3s ease; /* Transición suave para el cambio de color */
+  }
+  
+  /* Centramos los botones */
+  .card-body {
+    text-align: center; /* Centra todo el contenido dentro del body de la tarjeta */
+  }
+  
+  /* Efecto hover para los botones */
+  .btn-primary:hover {
+    background-color: #f1f1f1; /* Color de fondo al pasar el ratón */
+    color: #000; /* Mantener el color de la letra negra */
+  }
+  
+  /* Efecto cuando se presiona el botón */
+  .btn-primary:active {
+    background-color: #e82127; /* Rojo para el fondo cuando se presiona */
+    color: white; /* Letras blancas */
+    border: 1px solid #e82127; /* Borde rojo cuando se presiona */
+  }
+  /* Estilos para la imagen */
+.card-img-top {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: 400px; /* Ajusta la altura de la imagen para que se vea bien en todas las pantallas */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+  }
+  
+  /* Ajusta la sección de características para que todo esté bien alineado */
+  .card-body {
+    background-color: #343a40;
+    color: #f8f9fa;
+    padding: 20px;
+  }
+  
+  .card-body ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .card-body ul li {
+    margin: 10px 0;
+  }
+  

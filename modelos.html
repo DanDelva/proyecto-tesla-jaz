@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelos de Tesla</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Autos Tesla por Jatzyl</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="modelos.html">Modelos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="character.html">Características</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container my-5">
+    <h2 class="mb-4 text-center">Modelos de Tesla</h2>
+    <div class="row" id="teslaCards">
+      <!-- Tarjetas de autos generadas por JS -->
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 Autos Tesla. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    const tasaDeCambio = 20; // 1 USD = 20 MXN (ajustado a la tasa actual)
+
+    const autosTesla = [
+      {
+        nombre: "Model S",
+        imagen: "https://hips.hearstapps.com/hmg-prod/images/tesla-model-s-long-range-plus-1581964805.png",
+        descripcion: "Una berlina de lujo con alto rendimiento y tecnología avanzada.",
+        precioUSD: "$90,990",
+        id: "modelS"
+      },
+      {
+        nombre: "Model 3",
+        imagen: "https://service.tesla.com/docs/Public/diy/images/GUID-B5641257-9E85-404B-9667-4DA5FDF6D2E7-online-en-US.png",
+        descripcion: "El auto eléctrico más accesible de Tesla.",
+        precioUSD: "$39,990",
+        id: "model3"
+      },
+      {
+        nombre: "Model X",
+        imagen: "https://static.motor.es/fotos-noticias/2023/01/tesla-model-s-model-x-2023-202392257-1673294773_5_720x440.jpg",
+        descripcion: "SUV con puertas de ala de halcón y gran autonomía.",
+        precioUSD: "$94,990",
+        id: "modelX"
+      },
+      {
+        nombre: "Model Y",
+        imagen: "https://i.blogs.es/4cfbf7/tesla-y-nuevo/500_333.jpeg",
+        descripcion: "Un SUV compacto con gran espacio y eficiencia.",
+        precioUSD: "$46,990",
+        id: "modelY"
+      },
+      {
+        nombre: "Roadster",
+        imagen: "https://phantom-marca-mx.unidadeditorial.es/a1ac025912afc5e7952a11195e0196ac/resize/828/f/jpg/mx/assets/multimedia/imagenes/2024/01/03/17043109681367.jpg",
+        descripcion: "Un SUV compacto con gran espacio y eficiencia.",
+        precioUSD: "$200,000",
+        id: "roadster"
+      },
+      {
+        nombre: "Cybertruck",
+        imagen: "https://autospecs.com.mx/wp-content/uploads/2024/09/Cybertruck-1.webp",
+        descripcion: "El camioneta eléctrica más resistente y futurista.",
+        precioUSD: "$97,900",
+        id: "cybertruck"
+      }
+    ];
+
+    const contenedor = document.getElementById('teslaCards');
+
+    autosTesla.forEach(auto => {
+      const precioMXN = (parseFloat(auto.precioUSD.replace('$', '').replace(',', '')) * tasaDeCambio).toFixed(0);
+
+      contenedor.innerHTML += `
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card h-100">
+            <img src="${auto.imagen}" class="card-img-top" alt="${auto.nombre}">
+            <div class="card-body">
+              <h5 class="card-title">${auto.nombre}</h5>
+              <p class="card-text">${auto.descripcion}</p>
+              <h6 class="card-price">Precio: ${auto.precioUSD} | ${'$' + precioMXN.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} MXN</h6>
+              <!-- Enlace a la página de características con ID correspondiente -->
+              <a href="character.html#${auto.id}" class="btn btn-primary">Ver Características</a>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

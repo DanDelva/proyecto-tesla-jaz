@@ -1,0 +1,59 @@
+/* Tarjeta general (más pequeña) */
+.card {
+    width: 100%;
+    max-width: 500px; /* Limita el ancho para que no sea tan ancha */
+    margin: 20px auto; /* Centrado y separación */
+    border: none;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efecto hover */
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(168, 4, 9, 0.6);
+  }
+  
+  /* Imagen adaptada con proporción */
+  .card-img-top {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px 15px 0 0;
+    background-color: #ffffff;
+  }
+  
+  /* Cuerpo más compacto */
+  .card-body {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  /* Lista sin viñetas */
+  .card-body ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  /* Tamaño de texto reducido */
+  .card-body ul li {
+    margin: 8px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Título principal */
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #faf6f6;
+    margin-bottom: 20px;
+  }
+  
